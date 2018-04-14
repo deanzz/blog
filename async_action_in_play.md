@@ -5,9 +5,9 @@
 
 ## 发现问题
 目前elemental系统中datacenter、elemental-rest等服务接口模块中，大致分为三层，自顶向下是<br/>
-1.Controller控制层<br/>
-2.Service服务层<br/>
-3.Dao数据访问层<br/>
+1. Controller控制层
+2. Service服务层
+3. Dao数据访问层
 即一个服务接口会由上面3个部分组成。<br/>
 想要写出全程异步的服务接口，就得保证上面3个层面的代码都要是异步的。
 
