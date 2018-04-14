@@ -59,7 +59,7 @@ def getByProjectIds(projectIds: Seq[String]): Future[Seq[Project]] = {
 下面的具体实例中会详细演示。
 
 ### Controller控制层问题
-现在Service层也已经返回了一个Future了，但是就向上面提到的问题，如果你使用Play官方推荐的默认Action方法，那么你不得不将Service层结果await后组成已个Result返回。<br/>
+现在Service层也已经返回了一个Future了，但是就像上面提到的问题，如果你使用Play官方推荐的默认Action方法，那么你不得不将Service层结果await后组成一个Result再返回。<br/>
 不过Play还提供了另一个很好用的方法，那就是Action.async方法，它提供一种方式，将一个Future返回给框架处理。
 ```scala
 final def async(block: R[AnyContent] => Future[Result]): Action[AnyContent] = async(BodyParsers.parse.default)(block)
@@ -70,7 +70,7 @@ final def async(block: R[AnyContent] => Future[Result]): Action[AnyContent] = as
 
 
 ### 实例
-以本次后台清理需求中，查询用户各数据类型使用数据量的统计接口为例。
+以本次后台清理需求中，查询用户各数据类型存储使用量的统计接口为例。
 
 #### Dao层
 Dao层的查询逻辑很多，所以这里只拿一个查询逻辑为例，具体代码可以看elemental-rest中的elemental.rest.dao包中代码。
@@ -87,11 +87,10 @@ class StorageStatisticsDao @Inject()(implicit injector: Injector) extends Abstra
   }
 }
 
-
 case class StorageStatistics(storageType: String,
                              usedStorage: Option[Long])
 ```
-这里重点是getByUserID方法的返回值时一个Future。
+这里重点是getByUserID方法的返回值是一个Future。
 
 #### Service层
 版本一，通过Future提供的转换函数，进行新Future的构建。
@@ -202,6 +201,6 @@ def storageStatistics(): Action[AnyContent] = Action.async { implicit request =>
 ## 总结
 至此，一个全程异步的服务接口就完成了，如果再配合高效的dispatcher的设计，这样写出的服务接口会相当高效。<br/>
 异步非阻塞可以说是当代服务接口的标配，所以大家也要与时俱进，写出更高效的服务接口，<br/>
-不仅是为了满足elemental系统的高性能要求，而且也为了转变自己设计、编码程序的思维方式，这样写出异步非阻塞的服务接口就信手捏来。<br/>
+不仅是为了满足elemental系统的高性能要求，而且也为了转变自己设计、编码服务接口的思维方式，这样写出异步非阻塞的服务接口就信手捏来。<br/>
 所以最后再次强调一下，异步非阻塞，异步非阻塞，异步非阻塞！<br/>
 重要的事情说三遍。
