@@ -60,7 +60,7 @@ def getByProjectIds(projectIds: Seq[String]): Future[Seq[Project]] = {
 
 ### Controller控制层问题
 现在Service层也已经返回了一个Future了，但是就像上面提到的问题，如果你使用Play官方推荐的默认Action方法，那么你不得不将Service层结果await后组成一个Result再返回。<br/>
-不过Play还提供了另一个很好用的方法，那就是Action.async方法，它提供一种方式，将一个Future返回给框架处理。
+不过Play还提供了另一个很好用的方法，那就是Action.async方法，它提供一种方式，将一个Future返回给框架异步处理。
 ```scala
 final def async(block: R[AnyContent] => Future[Result]): Action[AnyContent] = async(BodyParsers.parse.default)(block)
 ```
