@@ -55,7 +55,7 @@ def getByProjectIds(projectIds: Seq[String]): Future[Seq[Project]] = {
 其实这个问题可以简化为，如何将多个Future转换成一个新的Future。<br/>
 这个就要依靠Future本身强大的处理转换的函数了，你可以把Future看成一个集合List，你可以map它、flatMap它、zip它等等，基本可以满足任何需求。<br/>
 还有一种更优雅的方式就是用for yield，能对Future进行组合处理，其实for yield就是转换成foreach、map、flatMap、filter或withFilter来实现的。<br/>
-具体请见：[scala官方文档](http://docs.scala-lang.org/tutorials/FAQ/yield.html)
+具体请见：[scala官方文档](http://docs.scala-lang.org/tutorials/FAQ/yield.html)<br/>
 下面的具体实例中会详细演示。
 
 ### Controller控制层问题
