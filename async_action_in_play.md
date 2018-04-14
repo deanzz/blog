@@ -4,11 +4,11 @@
 导致服务接口并不是全程异步，导致性能变差，所以我觉得有必要给大家演示一下如何在Play框架中写出全程异步的服务接口。
 
 ## 发现问题
-目前elemental系统中datacenter、elemental-rest等服务接口模块中，大致分为三层，自顶向下是
-1.Controller控制层
-2.Service服务层
-3.Dao数据访问层
-即一个服务接口会由上面3个部分组成。
+目前elemental系统中datacenter、elemental-rest等服务接口模块中，大致分为三层，自顶向下是<br/>
+1.Controller控制层<br/>
+2.Service服务层<br/>
+3.Dao数据访问层<br/>
+即一个服务接口会由上面3个部分组成。<br/>
 想要写出全程异步的服务接口，就得保证上面3个层面的代码都要是异步的。
 
 ### Dao数据访问层问题
@@ -22,8 +22,8 @@ protected implicit def await[A](future: Future[A]): A = Await.result(future, que
 Service层接到Dao层的同步结果，顺理成章会接着写同步代码去使用这个同步结果，这样导致Service服务层也是同步的。
 
 ### Controller控制层问题
-Controller层其实没什么问题，因为调用的是Play框架的Action方法，该方法默认就是异步的，
-但是另一种情况，当Service层返回的是一个异步结果Future，由于Play官方推荐的Action方法需要的是一个返回Result的函数，
+Controller层其实没什么问题，因为调用的是Play框架的Action方法，该方法默认就是异步的，<br/>
+但是另一种情况，当Service层返回的是一个异步结果Future，由于Play官方推荐的Action方法需要的是一个返回Result的函数，<br/>
 所以如果你使用下面的Action方法，你不得不把Service返回的Future执行Await成一个同步结果，最后组成一个Result返回。
 ```scala
 final def apply(block: R[AnyContent] => Result): Action[AnyContent] = apply(BodyParsers.parse.default)(block)
@@ -33,7 +33,7 @@ final def apply(block: R[AnyContent] => Result): Action[AnyContent] = apply(Body
 下面就针对上面三个层面的问题，一一解决。
 
 ### Dao数据访问层问题
-其实这层的问题很简单，人家默认就能返回一个异步的Future，所以在子类中数据访问方法的返回类型写成Future即可，比如
+其实这层的问题很简单，人家默认就能返回一个异步的Future，所以在子类中数据访问方法的返回类型写成Future即可，比如<br/>
 同步写法，由于返回类型是`Seq[Project]`，所以会默认走await的隐式转换，将返回的future变成同步返回。
 ```scala
 def getByProjectIds(projectIds: Seq[String]): Seq[Project] = {
@@ -50,21 +50,21 @@ def getByProjectIds(projectIds: Seq[String]): Future[Seq[Project]] = {
 ```
 
 ### Service服务层问题
-现在Dao层返回的已经是一个异步的Future了，那么只要保证Service层也返回一个Future即可。
-如何根据Dao层的Future再与Service的逻辑合并处理后再返回一个新的Future呢？
-其实这个问题可以简化为，如何将多个Future转换成一个新的Future。
-这个就要依靠Future本身强大的处理转换的函数了，你可以把Future看成一个集合List，你可以map它、flatMap它、zip它等等，基本可以满足任何需求。
-这里需要重点说一下，这些对Future的转换，仅仅是一个执行计划的转换，并没有实际执行转换，等这些执行计划转换完成，Future才会真正的使用Dispatcher中的线程执行。
-还有一种更优雅的方式就是用for yield，能对Future进行组合处理。
+现在Dao层返回的已经是一个异步的Future了，那么只要保证Service层也返回一个Future即可。<br/>
+如何根据Dao层的Future再与Service的逻辑合并处理后再返回一个新的Future呢？<br/>
+其实这个问题可以简化为，如何将多个Future转换成一个新的Future。<br/>
+这个就要依靠Future本身强大的处理转换的函数了，你可以把Future看成一个集合List，你可以map它、flatMap它、zip它等等，基本可以满足任何需求。<br/>
+这里需要重点说一下，这些对Future的转换，仅仅是一个执行计划的转换，并没有实际执行转换，等这些执行计划转换完成，Future才会真正的使用Dispatcher中的线程执行。<br/>
+还有一种更优雅的方式就是用for yield，能对Future进行组合处理。<br/>
 下面的具体实例中会详细演示。
 
 ### Controller控制层问题
-现在Service层也已经返回了一个Future了，但是就向上面提到的问题，如果你使用Play官方推荐的默认Action方法，那么你不得不将Service层结果await后组成已个Result返回。
+现在Service层也已经返回了一个Future了，但是就向上面提到的问题，如果你使用Play官方推荐的默认Action方法，那么你不得不将Service层结果await后组成已个Result返回。<br/>
 不过Play还提供了另一个很好用的方法，那就是Action.async方法，它提供一种方式，将一个Future返回给框架处理。
 ```scala
 final def async(block: R[AnyContent] => Future[Result]): Action[AnyContent] = async(BodyParsers.parse.default)(block)
 ```
-所以，你现在要做的只是将Service层返回的Future，通过Future强大的处理转换函数或for yield，将几个Future转换成一个新的`Future[Result]`返回。
+所以，你现在要做的只是将Service层返回的Future，通过Future强大的处理转换函数或for yield，将几个Future转换成一个新的`Future[Result]`返回。<br/>
 下面的具体实例中会详细演示。
 
 
@@ -200,8 +200,8 @@ def storageStatistics(): Action[AnyContent] = Action.async { implicit request =>
 ```
 
 ## 总结
-至此，一个全程异步的服务接口就完成了，如果再配合高效的dispatcher的设计，这样写出的服务接口会相当高效。
-异步非阻塞可以说是当代服务接口的标配，所以大家也要与时俱进，写出更高效的服务接口，
-不仅是为了满足elemental系统的高性能要求，而且也为了转变自己编码的思维方式，这样写出异步非阻塞的服务接口就信手捏来。
-所以最后再次强调一下，异步非阻塞，异步非阻塞，异步非阻塞！
+至此，一个全程异步的服务接口就完成了，如果再配合高效的dispatcher的设计，这样写出的服务接口会相当高效。<br/>
+异步非阻塞可以说是当代服务接口的标配，所以大家也要与时俱进，写出更高效的服务接口，<br/>
+不仅是为了满足elemental系统的高性能要求，而且也为了转变自己编码的思维方式，这样写出异步非阻塞的服务接口就信手捏来。<br/>
+所以最后再次强调一下，异步非阻塞，异步非阻塞，异步非阻塞！<br/>
 重要的事情说三遍。
