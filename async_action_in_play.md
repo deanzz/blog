@@ -54,8 +54,8 @@ def getByProjectIds(projectIds: Seq[String]): Future[Seq[Project]] = {
 如何根据Dao层的Future再与Service的逻辑合并处理后再返回一个新的Future呢？<br/>
 其实这个问题可以简化为，如何将多个Future转换成一个新的Future。<br/>
 这个就要依靠Future本身强大的处理转换的函数了，你可以把Future看成一个集合List，你可以map它、flatMap它、zip它等等，基本可以满足任何需求。<br/>
-这里需要重点说一下，这些对Future的转换，仅仅是一个执行计划的转换，并没有实际执行转换，等这些执行计划转换完成，Future才会真正的使用Dispatcher中的线程执行。<br/>
-还有一种更优雅的方式就是用for yield，能对Future进行组合处理。<br/>
+还有一种更优雅的方式就是用for yield，能对Future进行组合处理，其实for yield就是转换成foreach、map、flatMap、filter或withFilter来实现的。<br/>
+具体请见：[scala官方文档](http://docs.scala-lang.org/tutorials/FAQ/yield.html)
 下面的具体实例中会详细演示。
 
 ### Controller控制层问题
@@ -202,6 +202,6 @@ def storageStatistics(): Action[AnyContent] = Action.async { implicit request =>
 ## 总结
 至此，一个全程异步的服务接口就完成了，如果再配合高效的dispatcher的设计，这样写出的服务接口会相当高效。<br/>
 异步非阻塞可以说是当代服务接口的标配，所以大家也要与时俱进，写出更高效的服务接口，<br/>
-不仅是为了满足elemental系统的高性能要求，而且也为了转变自己编码的思维方式，这样写出异步非阻塞的服务接口就信手捏来。<br/>
+不仅是为了满足elemental系统的高性能要求，而且也为了转变自己设计、编码程序的思维方式，这样写出异步非阻塞的服务接口就信手捏来。<br/>
 所以最后再次强调一下，异步非阻塞，异步非阻塞，异步非阻塞！<br/>
 重要的事情说三遍。
