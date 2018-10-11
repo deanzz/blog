@@ -10,7 +10,7 @@
 既然是一个完整的计算机系统，那么它会拥有自己独立的操作系统、cpu、内存、磁盘、网络等资源以及独立操作系统内核，为什么要强调内核，后面会说到。  
 所以，虚拟机的框架图是下面这样的，  
 
-![vm](https://github.com/deanzz/blog/blob/master/k8s/img/vm.png?raw=true =100x300)
+![vm](https://github.com/deanzz/blog/blob/master/k8s/img/vm.png?raw=true&imageView/2/w/300/q/347)
 
 其中Server是服务器硬件；  
 Host OS是宿主机操作系统；  
@@ -92,7 +92,7 @@ cgroup.procs           cpu.cfs_quota_us   cpu.stat    cpuacct.usage  cpuacct.usa
 容器，其实就是一种特殊的进程。  
 
 所以容器的框架图是下面这样的  
-![vm](https://github.com/deanzz/blog/blob/master/k8s/img/container.png?raw=true =100x300)
+![vm](https://github.com/deanzz/blog/blob/master/k8s/img/container.png?raw=true&imageView/2/w/300/q/211)
 
 到目前为止，大家应该对容器的本质有了一个更清晰的认识。  
 
