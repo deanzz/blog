@@ -41,15 +41,16 @@ Guest OS是虚拟机操作系统，之上的App就是运行在虚拟机中的服
 int clone(int (*child_func)(void *), void *child_stack, int flags, void *arg);
 ```
 其中第3个参数flags，就是可以设置Namespace参数的地方。  
-Linux提供了PID、Mount、UTS、IPC、Network和User这些Namespace，具体请见下表，  
-| Namespace | 系统调用参数 | 隔离内容 |
-| :-: | :-: | :- | 
-| UTS | CLONE_NEWUTS | 主机名与域名 |
-| IPC | CLONE_NEWIPC | 信号量、消息队列和共享内存 |
-| PID | CLONE_NEWPID | 进程编号 |
-| Network | CLONE_NEWNET | 网络设备、网络栈、端口等等 |
-| Mount | CLONE_NEWNS | 挂载点（文件系统） |
-| User | CLONE_NEWUSER | 用户和用户组 |
+Linux提供了PID、Mount、UTS、IPC、Network和User这些Namespace，具体请见下表， 
+ 
+Namespace|系统调用参数|隔离内容
+:----|:---------|:-------
+UTS|CLONE_NEWUTS|主机名与域名
+IPC|CLONE_NEWIPC|信号量、消息队列和共享内存
+PID|CLONE_NEWPID|进程编号
+Network|CLONE_NEWNET|网络设备、网络栈、端口等等
+Mount|CLONE_NEWNS|挂载点（文件系统）
+User|CLONE_NEWUSER|用户和用户组
 
 通过添加上面提到的参数，你创建的进程就会只看到自己的时间，比如执行下面的代码，新建进程就会看到自己的PID是1，看到自己设置的主机名。
 ```
