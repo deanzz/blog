@@ -89,7 +89,7 @@ cgroup.procs           cpu.cfs_quota_us   cpu.stat    cpuacct.usage  cpuacct.usa
 
 所以，现在大家应该能回答"容器的本质是什么"这个问题了，  
 
-容器，其实就是一种特殊的进程。  
+<b>容器，其实就是一种特殊的进程。</b>  
 
 所以容器的框架图是下面这样的  
 
