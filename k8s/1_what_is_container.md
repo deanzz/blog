@@ -62,7 +62,7 @@ int pid = clone(container_main, STACK_SIZE,
 那么什么是Cgroups技术呢？  
 Linux Cgroups的全称是Linux Control Group。它最主要的作用，就是限制一个进程组能够使用的资源上限，包括CPU、内存、磁盘、网络带宽等等。  
 在Linux中，Cgroups给用户提供的操作接口是文件系统，即它以文件和目录的方式组织在操作系统的/sys/fs/cgroup路径下。  
-在Ubuntu 16.10上，我们可以用mount命令查看，  
+在Ubuntu 16.10上，我们可以用mount命令查看cgroups的虚拟文件系统(VFS)，  
 ```bash
 sa@hadoop4:~$ mount -t cgroup
 cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/lib/systemd/systemd-cgroups-agent,name=systemd)
@@ -77,7 +77,7 @@ cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpu
 cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
 cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
 ```
-具体看一下cpu的目录，  
+具体看一下控制cpu资源的目录，  
 ```bash
 sa@hadoop4:/sys/fs/cgroup/cpu$ ls container/
 cgroup.clone_children  cpu.cfs_period_us  cpu.shares  cpuacct.stat   cpuacct.usage_all     cpuacct.usage_percpu_sys   cpuacct.usage_sys   notify_on_release
@@ -99,24 +99,26 @@ cgroup.procs           cpu.cfs_quota_us   cpu.stat    cpuacct.usage  cpuacct.usa
 
 ## 容器和虚拟机的优势与劣势
 虚拟机和容器都具有的优势就是深入到操作系统级别的运行环境的一致性。  
+
 但是使用虚拟机作为应用的沙盒，就必须要由Hypervisor来负责创建虚拟机，这个虚拟机是真实存在的，并且它里面必须运行一个完整的Guest OS才能执行用户的应用进程，  
 这就不可避免地带来了额外的资源损耗和占用，  
+
 损耗表现在运行在虚拟机里面的用户进程，在对宿主机操作系统的调用时，就不可避免地要经过虚拟化软件的拦截和处理，导致对计算资源、网络和磁盘IO的性能损耗；  
 占用表现在虚拟机自己的资源使用，比如虚拟机本身就需要200M的内存。  
 
-相比之下，容器化后的用户应用，只是宿主机上的一个普通进程，这就意味着虚拟机带来的额外资源损耗和占用是不存在的。  
-但是容器也有缺点，基于Linux Namespace的隔离机制相比于虚拟机技术也有一些不足之处，其中最主要的问题就是，隔离不彻底。  
+相比之下，容器化后的用户进程，只是宿主机上的一个普通进程，这就意味着虚拟机带来的额外资源损耗和占用是不存在的。  
+但是容器也有缺点，基于Linux Namespace的隔离机制相比于虚拟机技术也有一些不足之处，其中最主要的问题就是，<b>隔离不彻底</b>。  
 首先，运行在同一宿主机的多个容器之间使用的都是宿主机操作系统的内核，这意味着，如果你想在低版本的Linux宿主机上运行高版本的Linux容器，是行不通的。  
 其次，在Linux内核中，有很多资源和对象是不能被Namespace化的，比如说时间，  
 如果你在容器中的程序使用settimeofday()系统调用修改了时间，那么整个宿主机的时间都会被修改。  
 但是对于虚拟机，这些都不是问题，虚拟机有自己的操作系统内核，你可以在虚拟机中随便折腾，也不会影响宿主机。  
 
 ## 总结
-总结一下这篇文章的重点，大家可以巩固一下，  
+总结一下这篇文章的重点，    
 1. 了解虚拟机与容器的本质区别  
     虚拟机是由Hypervisor创建的运行一个完整Guest OS，里面运行着用户的应用进程；  
-    容器，其实就是宿主机上一个特殊的进程。  
-2. Linux下的容器是通过Namespace技术和Cgroups技术实现的  
+    容器是宿主机上一个特殊的进程。  
+2. Linux下的容器主要是通过Namespace技术和Cgroups技术实现的  
 3. 容器和虚拟机的优势与劣势  
     虚拟机的优势就是隔离的很彻底，劣势就是比较重量级，并且存在额外的资源损耗和占用；  
     容器的优势就是轻量级，而且没有额外的资源损耗和占用，劣势就是隔离不彻底。  
