@@ -48,9 +48,9 @@ Namespace|系统调用参数|隔离内容
 UTS|CLONE_NEWUTS|主机名与域名
 IPC|CLONE_NEWIPC|信号量、消息队列和共享内存
 PID|CLONE_NEWPID|进程编号
-Network|CLONE_NEWNET|网络设备、网络栈、端口等等
 Mount|CLONE_NEWNS|挂载点（文件系统）
 User|CLONE_NEWUSER|用户和用户组
+Network|CLONE_NEWNET|网络设备、网络栈、端口等等
 
 通过添加上面提到的参数，你创建的进程就会只看到自己的世界，  
 比如执行下面的代码，新建进程就会看到自己的PID是1，和自己设置的主机名。
@@ -89,7 +89,7 @@ cgroup.procs           cpu.cfs_quota_us   cpu.stat    cpuacct.usage  cpuacct.usa
 
 所以，现在大家应该能回答"容器的本质是什么"这个问题了，  
 
-<b>容器，其实就是一种特殊的进程。</b>  
+<b>容器，其实就是一种特殊的进程。</b>与宿主机上的其他应用进程一样，只不过被Namespace和Cgroups修饰了一下。  
 
 所以容器的框架图是下面这样的  
 
