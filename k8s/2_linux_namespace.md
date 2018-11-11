@@ -189,7 +189,7 @@ sa@hadoop4:~/c$
 在容器进程执行前，挂载点/proc目录挂载的是父进程的proc虚拟文件系统，  
 容器进程运行后，挂载点/proc目录挂载的是容器进程的proc虚拟文件系统，  
 当容器进程结束后，挂载点/proc目录挂载的容器进程的proc虚拟文件系统就消失了，  
-所以需要你重新将挂载点/proc目录挂载到宿主机的proc虚拟文件系统。（自己的拙见，也许不完全正确）
+所以需要你重新将挂载点/proc目录挂载到宿主机的proc虚拟文件系统。（自己的理解，请指正）
 
 ## 切换容器根目录rootfs
 上面我们在使用上面Mount namespace时遇到了问题，即文件目录没有被隔离，  
@@ -274,7 +274,7 @@ sa@hadoop4:~/c$ ps -A
    10 ?        00:00:00 lru-add-drain
   ... 
 ```
-一切OK，文件系统被彻底的隔离了。
+一切OK，文件系统被彻底的隔离了，这其实就是所谓的容器镜像，容器环境的一致性就是靠它来实现的。。
 
 ## 隔离用户和用户组
 User Namespace主要是用了CLONE_NEWUSER的参数。使用了这个参数后，内部看到的UID和GID已经与外部不同了，默认显示为65534。  
@@ -376,7 +376,11 @@ int main()
     return 0;
 }
 ```
-然后编译代码，这回就不需要root权限执行了，因为通过User namespace，我们已经修改了容器内的用户为root，执行结果如下，
+然后编译代码，给编译好的执行文件设置全部的Capabilities，  
+```
+sudo /sbin/setcap all+eip ./bns
+```
+这回就不需要root权限执行了，因为通过User namespace，我们已经修改了容器内的用户为root，执行结果如下，
 ```bash
 sa@hadoop4:~/c$ ./bns
 Parent - start a container!
