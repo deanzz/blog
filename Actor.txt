@@ -1,0 +1,51 @@
+1. Dispatcher创建
+ActorSystem() ->
+new ActorSystemImpl ->
+new Dispatchers.defaultGlobalDispatcher ->
+Dispatchers.lookup(DefaultDispatcherId) ->
+Dispatchers.lookupConfigurator(id) ->
+Dispatchers.configuratorFrom(config(id)) -> new DispatcherConfigurator -> new -> factory.createExecutorService
+
+2. Actor的创建与启动
+ActorSystemImpl.actorOf ->
+ActorCell.makeChild[Children.makeChild] ->
+  LocalActorRefProvider.actorOf ->
+      new LocalActorRef(system.dispatchers.lookup(dispatchId))
+      actorCell = newActorCell
+      actorCell.init[Dispatch.init] ->
+        Dispatcher.createMailbox -> UnboundedMailbox.create
+        Mailbox.setActor(actor); dispatcher = actor.dispatcher //binding actorCell to mailbox
+        akka.dispatch.sysmsg.Create() // Actor creation message
+        Mailbox.systemEnqueue(createMessage) //put akka.dispatch.sysmsg.Create Message into mailbox
+        parent.sendSystemMessage(createMessage) ->
+        ActorCell.sendSystemMessage(createMessage) ->
+        Dispatcher.systemDispatch(actorCell, msg) ->
+          Dispatcher.registerForExecution(mailbox):
+            java.util.concurrent.ExecutorService.execute(mailbox) ->
+              mailbox:
+                Runnable.run():
+                  processAllSystemMessages -> ActorCell.systemInvoke(createMessage) -> ActorCell.newActor
+
+  LocalActorRef.start ->
+    ActorCell.start[Dispatch.start] ->
+    Dispatcher.attach(actorCell)[AbstractDispatcher.attach] ->
+    Dispatcher.registerForExecution(mailbox):
+      java.util.concurrent.ExecutorService.execute(mailbox) ->
+      mailbox:
+        Runnable.run():
+          processAllSystemMessages -> ActorCell.systemInvoke(msg)
+          processMailbox -> ActorCell.invoke(msg) -> Actor.aroundReceive(behaviorStack.head, msg) // become向behaviorStack的头添加一个Actor.Receive，unbecome移除behaviorStack头部的Actor.Receive
+
+
+3. Actor发消息, Dispatcher处理消息
+ActorRef !(message) ->
+ActorCell.sendMessage(message, sender) ->
+Dispatch.sendMessage(msg) ->
+Dispatcher.dispatch(msg) ->
+  Mailbox.enqueue(msg)
+  Dispatcher.registerForExecution(mailbox) ->
+    java.util.concurrent.ExecutorService.execute(mailbox) ->
+    mailbox:
+      Runnable.run():
+        processAllSystemMessages -> ActorCell.systemInvoke(msg)
+        processMailbox -> ActorCell.invoke(msg) -> Actor.aroundReceive(behaviorStack.head, msg) // become向behaviorStack的头添加一个Actor.Receive，unbecome移除behaviorStack头部的Actor.Receive
