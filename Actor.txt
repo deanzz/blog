@@ -1,3 +1,20 @@
+Actor创建(Provider.actorOf):
+1.lookup一个配置的dispatcher
+2.dispatcher.createMailbox创建Mailbox，并与actor绑定
+3.发送创建actor的Create系统消息到Mailbox
+4.dispatcher处理Mailbox中的系统消息Create消息，创建actor
+5.dispatcher开始从Mailbox中拿取消息并执行,即通过ExecutorService开始执行Mailbox(Runnable)（dispatcher.registerForExecution）
+
+Actor发消息(actor !(message)):
+1.Actor通过Dispatch特质的sendMessage方法发送message和sender
+2.将message和sender通过dispatcher.dispatch放入Mailbox，并尝试通过ExecutorService执行Mailbox(Runnable)（dispatcher.registerForExecution）
+3.ExecutorService从Mailbox的messageQueue中拿取消息，在Receive方法匹配出对应case的处理逻辑并执行
+4.然后继续不停地尝试通过ExecutorService执行Mailbox(Runnable)（dispatcher.registerForExecution）
+
+
+-----
+
+
 1. Dispatcher创建
 ActorSystem() ->
 new ActorSystemImpl ->
@@ -34,7 +51,7 @@ ActorCell.makeChild[Children.makeChild] ->
       mailbox:
         Runnable.run():
           processAllSystemMessages -> ActorCell.systemInvoke(msg)
-          processMailbox -> ActorCell.invoke(msg) -> Actor.aroundReceive(behaviorStack.head, msg) // become向behaviorStack的头添加一个Actor.Receive，unbecome移除behaviorStack头部的Actor.Receive
+          processMailbox -> val next = dequeue(); ActorCell.invoke(next) -> Actor.aroundReceive(behaviorStack.head, msg) // become向behaviorStack的头添加一个Actor.Receive，unbecome移除behaviorStack头部的Actor.Receive
 
 
 3. Actor发消息, Dispatcher处理消息
