@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-21T14:43:57.083Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="2z7TqqFKx__ZOKGtlQRS" version="17.0.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-21T14:45:07.981Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="26O1Jmb5uBh2ekLooXMh" version="17.0.0" type="github">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
     <mxGraphModel dx="1186" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -68,7 +68,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="TLK5XkgE6gAEmuYLz-ld-21" value="返回课程列表" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="1" target="TLK5XkgE6gAEmuYLz-ld-10" edge="1">
-          <mxGeometry x="0.4651" relative="1" as="geometry">
+          <mxGeometry relative="1" as="geometry">
             <mxPoint x="120" y="420" as="targetPoint" />
             <Array as="points">
               <mxPoint x="290" y="220" />
