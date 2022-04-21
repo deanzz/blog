@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-04-21T14:19:08.332Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="aL4XVnCEpWCwMCngDHWC" version="17.0.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-21T14:40:01.185Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="LD3XpIR17pEKm88Bfnr6" version="17.0.0" type="github">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
-    <mxGraphModel dx="1186" dy="670" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1186" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -87,7 +87,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="kXIZo_LiZvNYFcPQpfme-2" value="人工修改/录入课程表" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="1" target="7baba1c4bc27f4b0-8" edge="1">
+        <mxCell id="kXIZo_LiZvNYFcPQpfme-2" value="人工录入/修改课程表" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="1" target="7baba1c4bc27f4b0-8" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="110" y="380" as="sourcePoint" />
             <mxPoint x="350" y="380" as="targetPoint" />
@@ -99,7 +99,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="uhCvDFH-PkMVtbVr9GV_-1" value="管理员" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="80" y="40" width="60" height="30" as="geometry" />
+          <mxGeometry x="120" y="80" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="kXIZo_LiZvNYFcPQpfme-3" value="返回分工排课成功" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="1" target="TLK5XkgE6gAEmuYLz-ld-5" edge="1">
           <mxGeometry x="-0.0042" relative="1" as="geometry">
