@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-11-02T07:02:35.984Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="7VHAGIi4ZgAUq4hmxjB1" version="20.5.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-02T07:19:13.211Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="GcCmpel1KxxNjZIQX6ee" version="20.5.1" type="github">
   <diagram name="Page-1" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1426" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -11,13 +11,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="17472293e6e8944d-30" value="从前端获取的m3u8地址" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="290" y="55" width="120" height="50" as="geometry" />
+          <mxGeometry x="260" y="55" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="1fdf3b25b50cf41e-29" style="edgeStyle=none;html=1;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=12;" parent="1" source="1fdf3b25b50cf41e-1" target="1fdf3b25b50cf41e-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="1fdf3b25b50cf41e-1" value="1" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e0e0e0;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" parent="1" vertex="1">
-          <mxGeometry x="470" y="55" width="140" height="52" as="geometry" />
+          <mxGeometry x="460" y="55" width="140" height="52" as="geometry" />
         </mxCell>
         <mxCell id="1fdf3b25b50cf41e-2" value="下载m3u8中的ts文件" style="text;html=1;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;align=center;" parent="1fdf3b25b50cf41e-1" vertex="1">
           <mxGeometry y="26" width="140" height="26" as="geometry" />
@@ -46,7 +46,7 @@
           <mxGeometry y="26" width="180" height="26" as="geometry" />
         </mxCell>
         <mxCell id="1fdf3b25b50cf41e-15" value="5.1" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e0e0e0;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" parent="1" vertex="1">
-          <mxGeometry x="660" y="200" width="140" height="52" as="geometry" />
+          <mxGeometry x="460" y="200" width="140" height="52" as="geometry" />
         </mxCell>
         <mxCell id="1fdf3b25b50cf41e-16" value="将字幕内容转为srt" style="text;html=1;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;align=center;" parent="1fdf3b25b50cf41e-15" vertex="1">
           <mxGeometry y="26" width="140" height="26" as="geometry" />
@@ -64,12 +64,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="npwbuWX2ULoGUnXchPWu-6" value="5.2" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e0e0e0;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
-          <mxGeometry x="470" y="200" width="140" height="52" as="geometry" />
+          <mxGeometry x="250" y="200" width="140" height="52" as="geometry" />
         </mxCell>
         <mxCell id="npwbuWX2ULoGUnXchPWu-7" value="将mp4和srt合并" style="text;html=1;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;align=center;" vertex="1" parent="npwbuWX2ULoGUnXchPWu-6">
           <mxGeometry y="26" width="140" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="npwbuWX2ULoGUnXchPWu-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" target="npwbuWX2ULoGUnXchPWu-6">
+        <mxCell id="npwbuWX2ULoGUnXchPWu-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="1fdf3b25b50cf41e-15" target="npwbuWX2ULoGUnXchPWu-6">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="660" y="225" as="sourcePoint" />
             <mxPoint x="601.96" y="227.00199999999995" as="targetPoint" />
@@ -93,7 +93,7 @@
         <mxCell id="npwbuWX2ULoGUnXchPWu-13" value="6.2" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e0e0e0;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
           <mxGeometry x="460" y="350" width="150" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="npwbuWX2ULoGUnXchPWu-14" value="根据人工设置标签与词的映射关系，为视频段落打标签，记录标签对应的段落起止时间" style="text;html=1;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;align=center;" vertex="1" parent="npwbuWX2ULoGUnXchPWu-13">
+        <mxCell id="npwbuWX2ULoGUnXchPWu-14" value="根据人工设置的标签与词映射关系，为视频段落打标签，记录标签对应的段落起止时间" style="text;html=1;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;align=center;" vertex="1" parent="npwbuWX2ULoGUnXchPWu-13">
           <mxGeometry y="26" width="150" height="74" as="geometry" />
         </mxCell>
         <mxCell id="npwbuWX2ULoGUnXchPWu-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=1.013;entryY=0.016;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="npwbuWX2ULoGUnXchPWu-11" target="npwbuWX2ULoGUnXchPWu-14">
