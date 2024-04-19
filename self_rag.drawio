@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-19T09:35:10.635Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="uc5Ref-qhlzYrSXEhfgT" version="20.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-19T09:47:03.895Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="RnJGAzj1EVgq8Z9cyGId" version="20.7.2" type="github">
   <diagram name="Page-1" id="edf60f1a-56cd-e834-aa8a-f176f3a09ee4">
     <mxGraphModel dx="819" dy="435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -238,24 +238,30 @@
         <mxCell id="xyRuJvFbwlK5dDyZSk1e-3" value="grade_documents&lt;br&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;(大模型评估每个document是否与question相关)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
           <mxGeometry x="190" y="180" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="xyRuJvFbwlK5dDyZSk1e-5" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;是否存在与question相关的&lt;/span&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;document&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
-          <mxGeometry x="200" y="260" width="100" height="60" as="geometry" />
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-5" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;是否存在与question&lt;br&gt;相关的&lt;/span&gt;&lt;span style=&quot;font-size: 6px;&quot;&gt;document&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="195" y="260" width="110" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="xyRuJvFbwlK5dDyZSk1e-7" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8" edge="1" parent="1">
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-7" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-5" target="xyRuJvFbwlK5dDyZSk1e-8">
           <mxGeometry x="-0.7778" y="10" relative="1" as="geometry">
             <mxPoint as="offset" />
-            <mxPoint x="300" y="289.71" as="sourcePoint" />
-            <mxPoint x="390" y="289.71" as="targetPoint" />
+            <mxPoint x="300" y="290" as="sourcePoint" />
+            <mxPoint x="380" y="310" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=6;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-8" target="xyRuJvFbwlK5dDyZSk1e-12">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xyRuJvFbwlK5dDyZSk1e-8" value="generate&lt;br&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;(document作为context和question一起提交给大模型，生成一个答案generation)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
           <mxGeometry x="390" y="270" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="xyRuJvFbwlK5dDyZSk1e-9" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8" edge="1" parent="1">
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-9" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-5">
           <mxGeometry x="-0.5" y="10" relative="1" as="geometry">
             <mxPoint as="offset" />
-            <mxPoint x="249.71" y="320" as="sourcePoint" />
+            <mxPoint x="210" y="330" as="sourcePoint" />
             <mxPoint x="249.71" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="340" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="xyRuJvFbwlK5dDyZSk1e-10" value="transform_query&lt;br&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;(大模型优化question，获得better_question)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
@@ -269,6 +275,59 @@
             </Array>
             <mxPoint x="149.97" y="570.0285714285715" as="sourcePoint" />
             <mxPoint x="39.998571428571466" y="290.01714285714274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=6;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-12" target="xyRuJvFbwlK5dDyZSk1e-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-12" value="check_hallucination&lt;br&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;(大模型评估相关的documents是否可以作generation的支持依据)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="390" y="360" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-14" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;documents是否可以&lt;br&gt;作为generation的支持依据&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="395" y="440" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-16" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-14" target="xyRuJvFbwlK5dDyZSk1e-18">
+          <mxGeometry x="-0.7778" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="535" y="469.71000000000004" as="sourcePoint" />
+            <mxPoint x="520" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-17" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-14" target="xyRuJvFbwlK5dDyZSk1e-10">
+          <mxGeometry x="-0.5" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="440" y="520" as="sourcePoint" />
+            <mxPoint x="450" y="560" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="450" y="530" />
+              <mxPoint x="250" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=6;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-18" target="xyRuJvFbwlK5dDyZSk1e-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-18" value="is_addresses_question&lt;br&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;(大模型评估generation是否解决了question)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="570" y="450" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-19" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;generation是否可以&lt;br&gt;解决question&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="575" y="540" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-21" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-19">
+          <mxGeometry x="-0.7778" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="700" y="569.71" as="sourcePoint" />
+            <mxPoint x="750" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-22" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-19">
+          <mxGeometry x="-0.5" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="630" y="610" as="sourcePoint" />
+            <mxPoint x="250" y="400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="630" y="630" />
+            </Array>
           </mxGeometry>
         </mxCell>
       </root>
