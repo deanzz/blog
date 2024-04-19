@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2024-04-19T09:47:03.895Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="RnJGAzj1EVgq8Z9cyGId" version="20.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-19T09:59:48.111Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="CrrvQv3mhPlOneOTBqEu" version="20.7.2" type="github">
   <diagram name="Page-1" id="edf60f1a-56cd-e834-aa8a-f176f3a09ee4">
     <mxGraphModel dx="819" dy="435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-35" value="" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontSize=6;fillStyle=zigzag-line;dashed=1;dashPattern=1 1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="740" y="430" width="350" height="350" as="geometry" />
+        </mxCell>
         <mxCell id="xyRuJvFbwlK5dDyZSk1e-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=6;" edge="1" parent="1" source="60e70716793133e9-4" target="xyRuJvFbwlK5dDyZSk1e-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -313,7 +316,7 @@
         <mxCell id="xyRuJvFbwlK5dDyZSk1e-19" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;generation是否可以&lt;br&gt;解决question&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
           <mxGeometry x="575" y="540" width="110" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="xyRuJvFbwlK5dDyZSk1e-21" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-19">
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-21" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.03;entryY=0.518;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-19" target="xyRuJvFbwlK5dDyZSk1e-23">
           <mxGeometry x="-0.7778" y="10" relative="1" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="700" y="569.71" as="sourcePoint" />
@@ -329,6 +332,49 @@
               <mxPoint x="630" y="630" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=6;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-23" target="xyRuJvFbwlK5dDyZSk1e-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-23" value="is_update_answer&lt;br&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;(大模型评估是否将question+generation新增到chromadb)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="760" y="550" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-25" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;是否新增到chromadb&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="765" y="630" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=6;exitX=0.463;exitY=1.039;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-27" target="xyRuJvFbwlK5dDyZSk1e-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="986" y="755" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-27" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;question+generation新增到chromadb&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="930" y="640" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-28" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-25" target="xyRuJvFbwlK5dDyZSk1e-27">
+          <mxGeometry x="-0.7778" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="858.5699999999999" y="719.29" as="sourcePoint" />
+            <mxPoint x="929.9699999999998" y="720.01" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-29" value="end" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;rounded=0;shadow=1;labelBackgroundColor=none;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="790" y="740" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-32" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="xyRuJvFbwlK5dDyZSk1e-25" target="xyRuJvFbwlK5dDyZSk1e-29">
+          <mxGeometry x="-0.5" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="820" y="700" as="sourcePoint" />
+            <mxPoint x="849.4300000000001" y="730" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="820" y="720" />
+              <mxPoint x="820" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xyRuJvFbwlK5dDyZSk1e-34" value="&lt;span style=&quot;text-align: left;&quot;&gt;这里没想明白更新的逻辑，若更新返回的documents，那更新哪条？&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;即使更新了，那这个collection的细节会越来越少。&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;或者可以只新增question+generation？&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontSize=6;" vertex="1" parent="1">
+          <mxGeometry x="840" y="440" width="240" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
