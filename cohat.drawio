@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-24T03:59:43.201Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="dTiQ_ZV8Zlf0Xz3PFo42" version="24.4.4" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-24T04:06:39.383Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="bSAqPvIxO-igRnPI8EKa" version="24.4.4" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1434" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -54,18 +54,12 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="z2VaklTYjahulCSY6gSa-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="z2VaklTYjahulCSY6gSa-15" target="z2VaklTYjahulCSY6gSa-10">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="747" y="910" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="760" y="790" />
-              <mxPoint x="760" y="530" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="z2VaklTYjahulCSY6gSa-83" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="z2VaklTYjahulCSY6gSa-15" target="z2VaklTYjahulCSY6gSa-82">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="z2VaklTYjahulCSY6gSa-22" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="z2VaklTYjahulCSY6gSa-21">
-          <mxGeometry x="-0.6667" y="-1" relative="1" as="geometry">
-            <mxPoint x="-27" y="-1" as="offset" />
+        <mxCell id="z2VaklTYjahulCSY6gSa-84" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="z2VaklTYjahulCSY6gSa-83">
+          <mxGeometry x="-0.2667" relative="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="z2VaklTYjahulCSY6gSa-15" value="是否解决" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -85,12 +79,12 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="z2VaklTYjahulCSY6gSa-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="z2VaklTYjahulCSY6gSa-23" target="z2VaklTYjahulCSY6gSa-10">
+        <mxCell id="z2VaklTYjahulCSY6gSa-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="z2VaklTYjahulCSY6gSa-23" target="z2VaklTYjahulCSY6gSa-10">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="810" y="750" as="targetPoint" />
+            <mxPoint x="560" y="530" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="760" y="1100" />
-              <mxPoint x="760" y="530" />
+              <mxPoint x="430" y="1100" />
+              <mxPoint x="430" y="530" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -259,6 +253,18 @@
           <mxGeometry x="-0.8697" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="z2VaklTYjahulCSY6gSa-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="z2VaklTYjahulCSY6gSa-82">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="530" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="900" y="790" />
+              <mxPoint x="900" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z2VaklTYjahulCSY6gSa-82" value="llm指出答案为什么没有解决子问题，并优化问题话术，让大佬重新回答" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="720" y="755" width="140" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
