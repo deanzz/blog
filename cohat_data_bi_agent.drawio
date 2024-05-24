@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-24T07:27:13.822Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="or4euJBR8LsO49oa9OGa" version="24.4.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-24T07:28:52.821Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="7ckdOQy-7Ut-dIjFS61a" version="24.4.7" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1434" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -187,21 +187,16 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="xho7sPnH5Ay0xjF2sGZU-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="xho7sPnH5Ay0xjF2sGZU-58">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="740" y="1240" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="741" y="1190" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xho7sPnH5Ay0xjF2sGZU-64" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xho7sPnH5Ay0xjF2sGZU-63">
-          <mxGeometry x="-0.7116" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="xho7sPnH5Ay0xjF2sGZU-58" value="是否达&lt;div&gt;最大重试次数&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="160" y="1090" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="xho7sPnH5Ay0xjF2sGZU-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.617;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="xho7sPnH5Ay0xjF2sGZU-58" target="xho7sPnH5Ay0xjF2sGZU-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xho7sPnH5Ay0xjF2sGZU-66" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xho7sPnH5Ay0xjF2sGZU-65">
+          <mxGeometry x="-0.686" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
