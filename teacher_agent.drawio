@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-28T09:34:19.790Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="ZRd4PBY4lPfpoQu7di_l" version="24.4.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-28T09:35:51.966Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="1SwVpuOeaFLdtpzT8rkq" version="24.4.7" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="2261" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -44,7 +44,7 @@
         <mxCell id="chA8V7Ig7ssHcd86SWjw-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="chA8V7Ig7ssHcd86SWjw-8" target="chA8V7Ig7ssHcd86SWjw-10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="chA8V7Ig7ssHcd86SWjw-8" value="用户选择继续学习哪个知识体系，或者新开启一个知识体系" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="chA8V7Ig7ssHcd86SWjw-8" value="用户选择继续学习哪个知识体系，或者开启一个新知识体系" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="80" y="350" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="chA8V7Ig7ssHcd86SWjw-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="chA8V7Ig7ssHcd86SWjw-10" target="chA8V7Ig7ssHcd86SWjw-6">
@@ -99,6 +99,11 @@
         </mxCell>
         <mxCell id="chA8V7Ig7ssHcd86SWjw-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="chA8V7Ig7ssHcd86SWjw-22" target="chA8V7Ig7ssHcd86SWjw-26">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="chA8V7Ig7ssHcd86SWjw-47" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="chA8V7Ig7ssHcd86SWjw-27">
+          <mxGeometry x="0.04" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="chA8V7Ig7ssHcd86SWjw-22" value="是否&lt;div&gt;结束学习&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="100" y="1090" width="80" height="80" as="geometry" />
