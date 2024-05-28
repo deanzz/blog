@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-28T09:48:20.769Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="kX96kZeHe3puO71XGz62" version="24.4.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-28T09:49:12.376Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="bN4TgYZw49rkWygkaDGR" version="24.4.7" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="2261" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -148,7 +148,7 @@
           <mxGeometry x="-90" y="130" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="chA8V7Ig7ssHcd86SWjw-48" value="&lt;ol&gt;&lt;li&gt;python画脑图展示&lt;/li&gt;&lt;li&gt;按目录结构展示&lt;/li&gt;&lt;li&gt;标识当前学习位置&lt;/li&gt;&lt;li&gt;展示之前学习不到位的点&lt;/li&gt;&lt;/ol&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=top;overflow=hidden;horizontal=1;spacingTop=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="200" y="240" width="180" height="80" as="geometry" />
+          <mxGeometry x="200" y="230" width="180" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
